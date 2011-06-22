@@ -76,7 +76,7 @@
     }
 
     // Error if authentication didn't work, and provide info from twitter
-    if (!$oAuth['httpcode'] == 200) 
+    if ($oAuth['httpcode'] != 200) 
     {
         SendResponse($oAuth['response']['error'],$oAuth['httpcode']);
     }
